@@ -5,7 +5,7 @@ type Props = {
 const BlogList = ({posts}: Props) => {
   return (
     <div>
-      this bloglist
+      {posts.length}
     </div>
   )
 }

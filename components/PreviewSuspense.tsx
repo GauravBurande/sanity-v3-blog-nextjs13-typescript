@@ -1,3 +1,3 @@
-"use client";
+'use client';
 
-export { PreviewSuspense as default} from "next-sanity/preview"
+export { PreviewSuspense as default } from "next-sanity/preview";

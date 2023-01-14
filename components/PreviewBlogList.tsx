@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import { usePreview } from "../lib/sanity.preview"
 import BlogList from "./BlogList"
@@ -10,13 +10,6 @@ type Props = {
 export default function PreviewBlogList({ query }: Props) {
     const posts = usePreview(null, query)
     return (
-        <div>
             <BlogList posts={posts} />
-        </div>
     )
-    // return (
-    //     <div>
-    //         <BlogList posts={posts} />
-    //     </div>
-    // )
 }
