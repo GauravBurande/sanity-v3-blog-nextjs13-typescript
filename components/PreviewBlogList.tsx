@@ -2,26 +2,18 @@
 
 import { usePreview } from "../lib/sanity.preview"
 import { groq } from "next-sanity"
-import { lazy } from "react";
-// import BlogList from "./BlogList"
+import BlogList from "./BlogList"
 
-const PreviewBlogList = () => {
+type Props = {
+  query: string
+}
 
-    const query = groq`
-  *[_type=='post']{
-    ...,
-    author->,
-    categories[]->,
-  } | order(_createdAt, desc)
-`
-  
-    const BlogList = lazy(() => import("./BlogList"))
+export default function PreviewBlogList({query}: Props) {
+
     const posts = usePreview(null, query)
-    return  (
+    return (
         <div>
             <BlogList posts={posts} />
         </div>
     )
 }
-
-export default PreviewBlogList

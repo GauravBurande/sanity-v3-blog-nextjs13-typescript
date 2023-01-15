@@ -2,9 +2,9 @@ import { previewData } from "next/headers"
 import { groq } from "next-sanity"
 import { client } from "../../lib/sanity.client"
 import PreviewSuspense from "../../components/PreviewSuspense"
-// import PreviewBlogList from "../../components/PreviewBlogList"
+import PreviewBlogList from "../../components/PreviewBlogList"
 import BlogList from "../../components/BlogList"
-import { lazy } from "react"
+// import { lazy } from "react"
 
 const query = groq`
   *[_type=='post']{
@@ -16,7 +16,7 @@ const query = groq`
 
 const Page = async () => {
 
-    const PreviewBlogList = lazy(() => import("../../components/PreviewBlogList"))
+    // const PreviewBlogList = lazy(() => import("../../components/PreviewBlogList"))
 
     if (previewData()) {
 
@@ -29,7 +29,7 @@ const Page = async () => {
             fallback={
             <div className="text-center text-lg animate-pulse text-[#0ACBCB]">Loading Preview Data...</div>
         }>
-            <PreviewBlogList />
+                <PreviewBlogList query={query}/>
         </PreviewSuspense>
         )
 
