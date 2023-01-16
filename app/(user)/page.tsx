@@ -23,6 +23,7 @@ const Page = async () => {
         // I'm having an error below here (index.js?cc3a:10 Uncaught TypeError: wakeable.then is not a function at Object.markComponentSuspended)
         // I think it's related to the previewsuspense component or something related to the fallback, I've tried possibly every solution available on stackoverflow
         // maybe the component wrapped in previewsuspense is not returning a promise
+        // there's no problem with this component, actually the React development tools extension in the browser causes problems with rendering components with nextJs13
 
         return (
             < PreviewSuspense

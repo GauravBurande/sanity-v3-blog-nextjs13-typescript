@@ -1,7 +1,6 @@
 "use client";
 
 import { usePreview } from "../lib/sanity.preview"
-import { groq } from "next-sanity"
 import BlogList from "./BlogList"
 
 type Props = {

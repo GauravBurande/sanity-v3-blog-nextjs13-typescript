@@ -3,7 +3,6 @@ type Props = {
 }
 
 const BlogList = ({posts}: Props) => {
-    console.log(posts.length)
   return (
     <div>
       {posts.length}
