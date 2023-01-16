@@ -51,7 +51,6 @@ const Page = async () => {
     return (
         <>
         <BlogList posts={posts} />
-        this is not preview data
         </>
     )
 }

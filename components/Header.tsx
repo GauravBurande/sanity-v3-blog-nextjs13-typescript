@@ -13,7 +13,7 @@ const Header = () => {
             </div>
 
             <div>
-                <Link href={'https://github.com/GauravBurande'} className="px-5 py-3 text-sm md:text-base  bg-gray-700 text-[#0ACBCB] flex items-center rounded-full text-center">Check out my GitHub Profile</Link>
+                <Link href={'https://github.com/GauravBurande'}  target="_blank" className="px-5 py-3 text-xs sm:text-sm md:text-base  bg-gray-700 text-[#0ACBCB] flex items-center rounded-full text-center hover:bg-gradient-to-tr from-teal-400 via-violet-600 to-yellow-200 hover:text-white hover:shadow-2xl">Visit my GitHub Profile</Link>
             </div>
         </header>
     )
