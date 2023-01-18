@@ -13,16 +13,19 @@ type Props = {
 
 // export const revalidate = 60          // revalidate this page every 60 seconds
 
-export async function generateStaticParams() {
-  const query = groq`
-    *[_type=='post']
-    {
-      slug
-    };
-  `
 
-  const slugs: Post[] = await client.fetch(query)
-  const slugRoutes = slugs.map((slug) => slug.slug.current)
+
+export async function generateStaticParams() {
+  const slugRoutes = [
+    "a-list-of-useful-npm-packages-for-react-developers",
+    "react-awesome-components",
+    "the-difference-between-the-clever-developer-and-the-wise-developer",
+    "a-programmer-turned-an-open-source-tool-into-a-usd7-500-000-000-empire",
+    "up-and-running-with-golang-reactjs-and-mongodb-in-5-minutes-or-less",
+    "state-management-in-react-easy-peasy",
+    "sanity-studio-v3",
+    "awesome-things-related-to-react-hooks"
+  ]
 
   return slugRoutes.map((slug) => ({
     slug,
