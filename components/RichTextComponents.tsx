@@ -17,7 +17,7 @@ export const RichTextComponents: any = {
             </div>
         }
     },
-    list: {
+    lists: {
         bullet: ({ children }: any) => {
             <ul
                 className="ml-10 py-5 list-disc space-y-5"
